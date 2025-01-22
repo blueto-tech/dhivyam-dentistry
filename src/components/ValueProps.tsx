@@ -40,7 +40,7 @@ function ValueCard({ icon: Icon, title, description, delay }) {
       className="relative group"
     >
       <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-600 to-violet-600 rounded-2xl blur opacity-0 group-hover:opacity-100 transition duration-500"></div>
-      <div className="relative bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-500">
+      <div className="relative bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-500 md:min-h-[400px] flex flex-col justify-between">
         <div className="relative">
           <Sparkles />
           <motion.div

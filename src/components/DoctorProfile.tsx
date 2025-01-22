@@ -48,7 +48,7 @@ export default function DoctorProfile() {
           >
             <div className="aspect-[3/4] rounded-2xl overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=800&q=80"
+                src="/images/doctor-image.jpg"
                 alt="Doctor"
                 className="w-full h-full object-cover"
               />
@@ -71,7 +71,7 @@ export default function DoctorProfile() {
                   ease: "easeInOut",
                 }}
               >
-                <p className="text-3xl font-bold">10+</p>
+                <p className="text-3xl font-bold">4+</p>
                 <p className="text-sm">Years of Experience</p>
               </motion.div>
             </motion.div>
@@ -86,7 +86,7 @@ export default function DoctorProfile() {
           >
             <div className="relative">
               <StarSparkle density={15} scale={1.5} />
-              <h3 className="text-3xl font-bold text-gray-900 mb-4 relative z-10">Dr. Sarah Johnson</h3>
+              <h3 className="text-3xl font-bold text-gray-900 mb-4 relative z-10">Dr.Boopalan</h3>
               <div className="relative">
                 <StarSparkle density={10} scale={1.2} />
                 <p className="text-lg text-gray-600 mb-6 relative z-10">

@@ -17,86 +17,69 @@ export default function HomePage() {
       id: 'invisalign',
       title: 'Invisalign',
       description: 'Clear aligners for a perfect smile',
-      image: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&q=80',
+      image: '/images/clear-aligners.jpg',
       icon: <Smile className="w-8 h-8" />
     },
     { 
       id: 'dental-braces',
       title: 'Dental Braces',
       description: 'Traditional and modern orthodontic solutions',
-      image: 'https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=800&q=80',
+      image: '/images/dental-braces.jpg',
       icon: <Stethoscope className="w-8 h-8" />
     },
     { 
       id: 'veneers',
       title: 'Veneers',
       description: 'Transform your smile with porcelain veneers',
-      image: 'https://images.unsplash.com/photo-1541604193435-22287d32c2c2?w=800&q=80',
+      image: '/images/smile-designing.jpg',
       icon: <Stethoscope className="w-8 h-8" />
     },
     { 
       id: 'dental-implants',
       title: 'Dental Implants',
       description: 'Permanent solution for missing teeth',
-      image: 'https://images.unsplash.com/photo-1499714608240-22fc6ad53fb2?w=800&q=80',
+      image: '/images/dental-implants.jpg',
       icon: <Syringe className="w-8 h-8" />
     },
     { 
-      id: 'dental-implants',
-      title: 'Dental Implants',
-      description: 'Permanent solution for missing teeth',
-      image: 'https://images.unsplash.com/photo-1499714608240-22fc6ad53fb2?w=800&q=80',
+      id: 'wisdom-tooth-extraction',
+      title: 'Wisdom Tooth Extraction',
+      description: 'Wisdom tooth extraction',
+      image: '/images/wisdom-tooth-extraction.jpg',
       icon: <Syringe className="w-8 h-8" />
     },
+    
+    
     { 
-      id: 'dental-implants',
-      title: 'Dental Implants',
+      id: 'crowns-and-bridges',
+      title: 'Crowns and Bridges',
       description: 'Permanent solution for missing teeth',
-      image: 'https://images.unsplash.com/photo-1499714608240-22fc6ad53fb2?w=800&q=80',
+      image: '/images/crowns-and-bridges.jpg',
       icon: <Syringe className="w-8 h-8" />
+    },
+    
+    
+    { 
+      id: 'root-canal',
+      title: 'Root Canal',
+      description: 'Advanced endodontic treatment',
+      image: '/images/root-canal-treatment.jpg',
+      icon: <Stethoscope className="w-8 h-8" />
+    },
+    { 
+      id: 'paediatric-dentistry',
+      title: 'Paediatric Dentistry',
+      description: 'Pedodontists, specialize in diagnosing and treating dental problems in infants, children, and teenagers',
+      image: '/images/paediatric-dentistry.jpg',
+      icon: <Stethoscope className="w-8 h-8" />
     },
     { 
       id: 'teeth-whitening',
       title: 'Teeth Whitening',
       description: 'Professional whitening for a brighter smile',
-      image: 'https://images.unsplash.com/photo-1499714608240-22fc6ad53fb2?w=800&q=80',
+      image: 'images/teeth-whitening.jpg',
       icon: <Smile className="w-8 h-8" />
     },
-    { 
-      id: 'dental-implants',
-      title: 'Dental Implants',
-      description: 'Permanent solution for missing teeth',
-      image: 'https://images.unsplash.com/photo-1579083390476-919693a2222f?w=800&q=80',
-      icon: <Syringe className="w-8 h-8" />
-    },
-    { 
-      id: 'root-canal',
-      title: 'Root Canal',
-      description: 'Advanced endodontic treatment',
-      image: 'https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=800&q=80',
-      icon: <Stethoscope className="w-8 h-8" />
-    },
-    { 
-      id: 'root-canal',
-      title: 'Root Canal',
-      description: 'Advanced endodontic treatment',
-      image: 'https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=800&q=80',
-      icon: <Stethoscope className="w-8 h-8" />
-    },
-    { 
-      id: 'root-canal',
-      title: 'Root Canal',
-      description: 'Advanced endodontic treatment',
-      image: 'https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=800&q=80',
-      icon: <Stethoscope className="w-8 h-8" />
-    },
-    { 
-      id: 'root-canal',
-      title: 'Root Canal',
-      description: 'Advanced endodontic treatment',
-      image: 'https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=800&q=80',
-      icon: <Stethoscope className="w-8 h-8" />
-    }
   ];
 
   return (
@@ -131,8 +114,8 @@ export default function HomePage() {
       </section>
 
       <DoctorProfile />
-      <CounterSection />
-      <Testimonials />
+      {/* <CounterSection /> */}
+      {/* <Testimonials /> */}
       <TeethAnimation />
       
       {/* Appointment Section */}

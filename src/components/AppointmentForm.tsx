@@ -1,21 +1,88 @@
+import {useState} from 'react'
 import { motion } from 'framer-motion';
 import { Calendar, Clock, User, Phone, Mail, MessageSquare } from 'lucide-react';
 import toast from 'react-hot-toast';
+import emailjs from 'emailjs-com';
 
 export default function AppointmentForm() {
+
+  const [formData, setFormData] = useState({
+    fullName: '',
+    phoneNumber:'',
+    email: '',
+    preferredDate: '',
+    preferredTime: '',
+    treatmentType:'',
+    additionalNotes:''
+  });
+  const handleInputChange = (e: { target: { name: any; value: any; }; }) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+  // EmailJS service details (replace with your credentials from EmailJS)
+  const serviceID = 'service_x7r2n2m'; 
+  const templateID = 'template_1plo6kk'; 
+  const publicKey = 'MLRl7ruCqmoo8wkpn';
+
   const handleSubmit = (e: React.FormEvent) => {
+    console.log(e.target)
     e.preventDefault();
-    toast.success('Appointment scheduled successfully! We will contact you shortly.', {
-      duration: 5000,
-      position: 'top-center',
-      icon: '👋',
-      style: {
-        background: '#4F46E5',
-        color: '#fff',
-        borderRadius: '10px',
-      },
-    });
+// Collect form data
+const { fullName, phoneNumber, email, preferredDate, preferredTime, treatmentType, additionalNotes } = formData;
+
+    const emailData = {
+      patient_name: fullName,
+      patient_phoneNumber:phoneNumber,
+      patient_email: email,
+      date: preferredDate,
+      time: preferredTime,
+      treatment_type:treatmentType,
+      additional_notes:additionalNotes,
+      to_name:'Dhivyam Dentistry'
+    };
+    
+     // ---------Send the form data using EmailJS------------
+     emailjs.send(serviceID, templateID, emailData, publicKey)
+     .then((response) => {
+       console.log('Success:', response);
+       toast.success('Appointment scheduled successfully! We will contact you shortly.', {
+         duration: 5000,
+         position: 'top-center',
+         icon: '👋',
+         style: {
+           background: '#4F46E5',
+           color: '#fff',
+           borderRadius: '10px',
+         },
+       });
+     })
+     .catch((error) => {
+       console.error('Error:', error);
+       toast.error('Failed to send appointment details. Please try again.', {
+         duration: 5000,
+         position: 'top-center',
+         icon: '⚠️',
+         style: {
+           background: '#DC2626',
+           color: '#fff',
+           borderRadius: '10px',
+         },
+       });
+     });
     (e.target as HTMLFormElement).reset();
+     // -----Reset form after submission--------
+     setFormData({
+      fullName: '',
+      phoneNumber: '',
+      email: '',
+      preferredDate: '',
+      preferredTime: '',
+      treatmentType: '',
+      additionalNotes: '',
+    });
   };
 
   return (
@@ -35,8 +102,11 @@ export default function AppointmentForm() {
             </label>
             <input
               type="text"
+              name="fullName"
               className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
               required
+              value={formData.fullName}
+              onChange={handleInputChange}
             />
           </div>
           <div>
@@ -46,8 +116,11 @@ export default function AppointmentForm() {
             </label>
             <input
               type="tel"
+              name="phoneNumber"
               className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
               required
+              value={formData.phoneNumber}
+              onChange={handleInputChange}
             />
           </div>
           <div>
@@ -57,8 +130,11 @@ export default function AppointmentForm() {
             </label>
             <input
               type="email"
+              name="email"
               className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
               required
+              value={formData.email}
+              onChange={handleInputChange}
             />
           </div>
           <div>
@@ -70,6 +146,9 @@ export default function AppointmentForm() {
               type="date"
               className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
               required
+              name='preferredDate'
+              value={formData.preferredDate}
+              onChange={handleInputChange}
             />
           </div>
           <div>
@@ -80,6 +159,9 @@ export default function AppointmentForm() {
             <select
               className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
               required
+              name='preferredTime'
+              value={formData.preferredTime}
+              onChange={handleInputChange}
             >
               <option value="">Select a time</option>
               <option value="morning">Morning (9 AM - 12 PM)</option>
@@ -94,6 +176,9 @@ export default function AppointmentForm() {
             <select
               className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
               required
+              name='treatmentType'
+              value={formData.treatmentType}
+              onChange={handleInputChange}
             >
               <option value="">Select treatment</option>
               <option value="general">General Checkup</option>
@@ -110,8 +195,12 @@ export default function AppointmentForm() {
             Additional Notes
           </label>
           <textarea
+              
+              name="additionalNotes"
             className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
             rows={4}
+            value={formData.additionalNotes}
+              onChange={handleInputChange}
           ></textarea>
         </div>
         <div className="mt-6">

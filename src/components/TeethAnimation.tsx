@@ -64,9 +64,9 @@ export default function TeethAnimation() {
             </motion.a>
           </motion.div>
 
-          <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 ">
             {[
-              { label: "Free Consultation", delay: 0 },
+              { label: "Friendly Consultation", delay: 0 },
               { label: "Latest Technology", delay: 0.1 },
               { label: "Flexible Schedule", delay: 0.2 },
               { label: "Affordable Plans", delay: 0.3 },
@@ -77,13 +77,13 @@ export default function TeethAnimation() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: item.delay }}
                 viewport={{ once: true }}
-                className="text-center"
+                className="text-center "
               >
                 <motion.div
                   whileHover={{ y: -5 }}
-                  className="bg-white p-6 rounded-xl shadow-md"
+                  className="bg-white min-h-[100px]   p-6 rounded-xl shadow-md"
                 >
-                  <p className="text-gray-800 font-medium">{item.label}</p>
+                  <p className="text-gray-800 font-medium  ">{item.label}</p>
                 </motion.div>
               </motion.div>
             ))}
