@@ -71,8 +71,9 @@ export default function Footer() {
           <div>
             <h3 className="text-xl font-semibold mb-6">Quick Links</h3>
             <ul className="space-y-3">
-              {['Home', 'About Us', 'Services', 'Testimonials', 'Book Appointment'].map((link, index) => (
+              {['Home', 'About Us', 'Services', 'Book Appointment'].map((link, index) => (
                 <motion.li key={index} whileHover={{ x: 3 }}>
+                  
                   <a href={`#${link.toLowerCase().replace(' ', '-')}`} className="text-gray-400 hover:text-blue-400 transition-colors">
                     {link}
                   </a>
