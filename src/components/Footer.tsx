@@ -5,7 +5,12 @@ export default function Footer() {
   const phoneNumber = '+919876543210'; // Replace with actual number
   const whatsappMessage = encodeURIComponent('Hi, I would like to schedule an appointment.');
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${whatsappMessage}`;
-
+  const socialLinks = [
+    { icon: Facebook, url: "https://www.facebook.com" },
+    { icon: Twitter, url: "https://www.twitter.com" },
+    { icon: Instagram, url: "https://www.instagram.com" },
+    { icon: Linkedin, url: "https://www.linkedin.com" },
+  ];
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -17,14 +22,16 @@ export default function Footer() {
               Providing exceptional dental care with advanced technology and a gentle touch.
             </p>
             <div className="flex space-x-4">
-              {[Facebook, Twitter, Instagram, Linkedin].map((Icon, index) => (
+              {socialLinks.map((social, index) => (
                 <motion.a
                   key={index}
-                  href="#"
+                  href={social.url}
                   whileHover={{ y: -3 }}
                   className="bg-gray-800 p-2 rounded-full hover:bg-blue-600 transition-colors"
                 >
-                  <Icon className="w-5 h-5" />
+                  
+                  <social.icon className="w-5 h-5" />
+                  
                 </motion.a>
               ))}
             </div>
@@ -74,7 +81,7 @@ export default function Footer() {
               {['Home', 'About Us', 'Services', 'Book Appointment'].map((link, index) => (
                 <motion.li key={index} whileHover={{ x: 3 }}>
                   
-                  <a href={`#${link.toLowerCase().replace(' ', '-')}`} className="text-gray-400 hover:text-blue-400 transition-colors">
+                  <a href={link === "Book Appointment" ? "#appointment" : `#${link.toLowerCase().replace(' ', '-')}`}  className="text-gray-400 hover:text-blue-400 transition-colors">
                     {link}
                   </a>
                 </motion.li>
