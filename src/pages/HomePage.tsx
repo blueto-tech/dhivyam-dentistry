@@ -83,7 +83,7 @@ export default function HomePage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 overflow-x-hidden">
       <Navbar />
       <Hero />
       <ValueProps />

@@ -47,10 +47,11 @@ export default function Hero() {
               animate={{ scale: 1 }}
               transition={{ duration: 0.5 }}
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/50 to-violet-500/50 blur-lg"></div>
-              <div className="relative px-6 py-3 rounded-lg bg-gradient-to-r from-blue-600/20 to-violet-600/20 backdrop-blur-sm border border-white/30">
+              <div className="absolute  inset-0 bg-gradient-to-r from-blue-500/50 to-violet-500/50 blur-lg "></div>
+              <div className="relative left-10 md:left-0 px-6 py-3 rounded-lg bg-gradient-to-r from-blue-600/20 to-violet-600/20 
+              backdrop-blur-sm border border-white/30 ">
 
-                <div className="flex justify-center mb-1">
+                <div className="flex  justify-center mb-1">
                   {welcomeText.map((letter, i) => (
                     <motion.span
                       key={i}

@@ -130,13 +130,13 @@ export default function DoctorProfile() {
               >
                 <span>Book Consultation</span>
               </motion.a>
-              <motion.div
+              {/* <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg inline-flex items-center space-x-2 hover:bg-blue-50 transition-colors"
               >
                 <span>View Credentials</span>
-              </motion.div>
+              </motion.div> */}
             </div>
           </motion.div>
         </div>
