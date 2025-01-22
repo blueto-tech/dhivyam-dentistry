@@ -20,15 +20,17 @@ export default function Navbar() {
   }, []);
 
   const scrollToSection = (sectionId: string) => {
-    if (location.pathname !== '/') {
-      navigate('/#' + sectionId);
-      setTimeout(() => {
-        document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
-      }, 100);
-    } else {
-      document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
     }
-    setIsOpen(false);
+
+    // ----------Close the mobile menu after scroll-------
+    setTimeout(() => {
+      setIsOpen(false);
+    }, 1000); 
+   
+    
   };
 
   return (
@@ -88,16 +90,12 @@ export default function Navbar() {
             >
               Services
             </button>
-            <button 
-              onClick={() => scrollToSection('testimonials')}
-              className={`transition-colors duration-300 ${
-                isScrolled ? 'text-gray-700 hover:text-blue-600' : 'text-white hover:text-blue-200'
-              }`}
-            >
-              Testimonials
-            </button>
+            
             <button
-              onClick={() => scrollToSection('appointment')}
+              onClick={() =>{
+                scrollToSection('appointment')
+              
+              } }
               className={`px-5 py-2 rounded-full text-sm transition-colors duration-300 ${
                 isScrolled
                   ? 'bg-blue-600 text-white hover:bg-blue-700'
@@ -132,12 +130,14 @@ export default function Navbar() {
           <button 
             onClick={() => scrollToSection('home')}
             className="block w-full text-left px-3 py-2 text-gray-700 hover:text-blue-600"
+            
           >
             Home
           </button>
           <button 
             onClick={() => scrollToSection('about')}
             className="block w-full text-left px-3 py-2 text-gray-700 hover:text-blue-600"
+            
           >
             About Us
           </button>
@@ -147,14 +147,12 @@ export default function Navbar() {
           >
             Services
           </button>
-          <button 
-            onClick={() => scrollToSection('testimonials')}
-            className="block w-full text-left px-3 py-2 text-gray-700 hover:text-blue-600"
-          >
-            Testimonials
-          </button>
+         
           <button
-            onClick={() => scrollToSection('appointment')}
+            onClick={() => {
+              scrollToSection('appointment')
+             
+            }}
             className="block w-full text-left px-3 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700"
           >
             Book Appointment

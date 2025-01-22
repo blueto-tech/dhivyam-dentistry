@@ -44,7 +44,7 @@ export default function Footer() {
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-blue-400" />
-                <p className="text-gray-400">info@dhivyamdental.com</p>
+                <p className="text-gray-400">dhivyamdentistry@gmail.com</p>
               </div>
               <div className="flex items-start space-x-3">
                 <Clock className="w-5 h-5 text-blue-400 mt-1" />

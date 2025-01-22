@@ -120,13 +120,13 @@ export default function HomePage() {
       
       {/* Appointment Section */}
       <section id="appointment" className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center mb-16 "
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Book an Appointment</h2>
             <p className="text-xl text-gray-600">Schedule your visit with our expert dental team</p>
