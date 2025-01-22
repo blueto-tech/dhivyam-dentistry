@@ -13,7 +13,7 @@ export default function DoctorProfile() {
     {
       year: "2020-2021",
       degree: "Endodontic Fellowship",
-      institution: "Advanced Dental Care",
+      institution: "",
       icon: <Award className="w-5 h-5" />,
     },
     {

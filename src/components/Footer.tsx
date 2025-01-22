@@ -36,11 +36,11 @@ export default function Footer() {
             <div className="space-y-4">
               <div className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-blue-400 mt-1" />
-                <p className="text-gray-400">123 Dental Street, Chennai, Tamil Nadu 600001</p>
+                <p className="text-gray-400">86/142, Thuraiyur road, Near manoharan hospital, Namakkal-637001</p>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-blue-400" />
-                <p className="text-gray-400">+1 234 567 890</p>
+                <p className="text-gray-400">+91 90474 70177</p>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-blue-400" />
@@ -53,7 +53,7 @@ export default function Footer() {
                   <p>Sunday: Closed</p>
                 </div>
               </div>
-              <motion.a
+              {/* <motion.a
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -63,7 +63,7 @@ export default function Footer() {
               >
                 <MessageCircle className="w-5 h-5" />
                 <span>Chat on WhatsApp</span>
-              </motion.a>
+              </motion.a> */}
             </div>
           </div>
 
@@ -85,15 +85,15 @@ export default function Footer() {
           <div>
             <h3 className="text-xl font-semibold mb-6">Find Us</h3>
             <div className="rounded-lg overflow-hidden h-48">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248849.886539092!2d80.20901529999999!3d13.047809899999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5265ea4f7d3361%3A0x6e61a70b6863d433!2sChennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1689000000000!5m2!1sen!2sin"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              ></iframe>
+            <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3913.5889742960603!2d78.16905497481167!3d11.218016388958892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babce9316f77cfb%3A0xeb53940958dfcb1e!2sSri%20Ram%20Nursing%20Home%20-%20Manoharan%20Hospital!5e0!3m2!1sen!2sin!4v1737538735114!5m2!1sen!2sin"
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"></iframe>
+              
             </div>
           </div>
         </div>
