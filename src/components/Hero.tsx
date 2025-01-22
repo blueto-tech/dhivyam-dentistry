@@ -112,7 +112,7 @@ export default function Hero() {
                 href="#appointment"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="relative group px-6 py-3 rounded-full text-sm font-medium shadow-lg bg-gradient-to-r from-violet-600 via-purple-600 to-blue-600 text-white hover:shadow-xl transition-all duration-300"
+                className="relative group bg-white px-6 py-3 rounded-full text-sm font-medium shadow-lg bg-gradient-to-r from-violet-600 via-purple-600 to-blue-600 text-white hover:shadow-xl transition-all duration-300"
               >
                 <span className="flex items-center gap-2">
                   <Calendar className="w-4 h-4" />
