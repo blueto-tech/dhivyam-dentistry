@@ -86,7 +86,7 @@ export default function DoctorProfile() {
           >
             <div className="relative">
               <StarSparkle density={15} scale={1.5} />
-              <h3 className="text-3xl font-bold text-gray-900 mb-4 relative z-10">Dr.Boopalan</h3>
+              <h3 className="text-3xl font-bold text-gray-900 mb-4 relative z-10">Dr.Boobalan</h3>
               <div className="relative">
                 <StarSparkle density={10} scale={1.2} />
                 <p className="text-lg text-gray-600 mb-6 relative z-10">
