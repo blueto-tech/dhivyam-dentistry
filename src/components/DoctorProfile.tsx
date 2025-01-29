@@ -5,19 +5,19 @@ import StarSparkle from './StarSparkle';
 export default function DoctorProfile() {
   const qualifications = [
     {
-      year: "2015-2020",
+      year: "",
       degree: "Bachelor of Dental Surgery",
       institution: "SRM Dental College, Ramapuram",
       icon: <GraduationCap className="w-5 h-5" />,
     },
     {
-      year: "2020-2021",
+      year: "",
       degree: "Endodontic Fellowship",
       institution: "",
       icon: <Award className="w-5 h-5" />,
     },
     {
-      year: "2021-2024",
+      year: "",
       degree: "MDS - Oral and Maxillofacial Pathology",
       institution: "Meenakshi Ammal Dental College and Hospital",
       icon: <Star className="w-5 h-5" />,

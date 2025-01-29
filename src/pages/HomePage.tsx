@@ -15,35 +15,35 @@ export default function HomePage() {
   const services = [
     { 
       id: 'invisalign',
-      title: 'Invisalign',
+      title: 'INVISALIGN',
       description: 'Clear aligners for a perfect smile',
       image: '/images/clear-aligners.jpg',
       icon: <Smile className="w-8 h-8" />
     },
     { 
       id: 'dental-braces',
-      title: 'Dental Braces',
+      title: 'DENTAL BRACES',
       description: 'Traditional and modern orthodontic solutions',
       image: '/images/dental-braces.jpg',
       icon: <Stethoscope className="w-8 h-8" />
     },
     { 
       id: 'veneers',
-      title: 'Veneers',
+      title: 'VEENERS',
       description: 'Transform your smile with porcelain veneers',
       image: '/images/smile-designing.jpg',
       icon: <Stethoscope className="w-8 h-8" />
     },
     { 
       id: 'dental-implants',
-      title: 'Dental Implants',
+      title: 'DENTAL IMPLANTS',
       description: 'Permanent solution for missing teeth',
       image: '/images/dental-implants.jpg',
       icon: <Syringe className="w-8 h-8" />
     },
     { 
       id: 'wisdom-tooth-extraction',
-      title: 'Wisdom Tooth Extraction',
+      title: 'WISDOM TOOTH EXTRACTION',
       description: 'Wisdom tooth extraction',
       image: '/images/wisdom-tooth-extraction.jpg',
       icon: <Syringe className="w-8 h-8" />
@@ -52,7 +52,7 @@ export default function HomePage() {
     
     { 
       id: 'crowns-and-bridges',
-      title: 'Crowns and Bridges',
+      title: 'CROWN AND BRIDGES',
       description: 'Permanent solution for missing teeth',
       image: '/images/crowns-and-bridges.jpg',
       icon: <Syringe className="w-8 h-8" />
@@ -61,25 +61,25 @@ export default function HomePage() {
     
     { 
       id: 'root-canal',
-      title: 'Root Canal',
+      title: 'ROOT CANAL',
       description: 'Advanced endodontic treatment',
       image: '/images/root-canal-treatment.jpg',
       icon: <Stethoscope className="w-8 h-8" />
     },
     { 
       id: 'paediatric-dentistry',
-      title: 'Paediatric Dentistry',
+      title: 'PAEDIATRIC DENTISTRY',
       description: 'Pedodontists, specialize in diagnosing and treating dental problems in infants, children, and teenagers',
       image: '/images/paediatric-dentistry.jpg',
       icon: <Stethoscope className="w-8 h-8" />
     },
-    { 
-      id: 'teeth-whitening',
-      title: 'Teeth Whitening',
-      description: 'Professional whitening for a brighter smile',
-      image: 'images/teeth-whitening.jpg',
-      icon: <Smile className="w-8 h-8" />
-    },
+    // { 
+    //   id: 'teeth-whitening',
+    //   title: 'Teeth Whitening',
+    //   description: 'Professional whitening for a brighter smile',
+    //   image: 'images/teeth-whitening.jpg',
+    //   icon: <Smile className="w-8 h-8" />
+    // },
   ];
 
   return (
